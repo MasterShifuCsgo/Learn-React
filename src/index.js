@@ -5,7 +5,7 @@ function MyApp(){
   return React.createElement('ul', null, [
     React.createElement('li', null, "TextContent"),
     React.createElement('li', null, "TextContent"),
-    React.createElement('li', null, "TextContenat"),
+    React.createElement('li', null, "TextContent"),
   ]);
 }
 
@@ -15,7 +15,5 @@ function MyApp(){
 
 const root = createRoot(document.getElementById("root"));
 
-let ul = MyApp();
-
-root.render(ul);
+root.render(<MyApp/>);
 
