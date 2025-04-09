@@ -7,6 +7,13 @@ import { createRoot } from "react-dom/client";
 
 const root = createRoot(document.getElementById("root"));
   
-let elementP = React.createElement('div', null, "HELLO KASPAR");
-root.render(elementP);
+let ul = React.createElement('ul', null, [
+  React.createElement('li', null, "TextContent"),
+  React.createElement('li', null, "TextContent"),
+  React.createElement('li', null, "TextContent"),
+]);
+
+
+
+root.render(ul);
 
