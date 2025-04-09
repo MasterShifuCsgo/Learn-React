@@ -1,19 +1,21 @@
-import React from "react"; // enables jsx.
-import { createRoot } from "react-dom/client";
+import React from 'react';
+import {createRoot} from 'react-dom/client';
 
-function MyApp(){
-  return React.createElement('ul', null, [
-    React.createElement('li', null, "TextContent"),
-    React.createElement('li', null, "TextContent"),
-    React.createElement('li', null, "TextContent"),
-  ]);
+function MyInfo(){
+  return (
+    <div>
+      <h1>Kaspar Bergert</h1>
+      <p>I will have a C1 English exam in 3 days</p>
+      <ul>
+        <li>Finland</li>
+        <li>Germany</li>
+        <li>Switzerland</li>
+      </ul>
+    </div>
+  )
 }
 
-//jsx --
-//  a javscript file
-//  that is suited for react syntax.
 
-const root = createRoot(document.getElementById("root"));
+const root = createRoot(document.getElementById('root'));
 
-root.render(<MyApp/>);
-
+root.render(<MyInfo/>);
