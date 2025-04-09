@@ -1,0 +1,14 @@
+
+body {
+  margin: 0px;
+}
+
+p{
+  margin: 0px;
+  display: flex;
+}
+
+.divElement{
+  display: flex;
+  
+}
