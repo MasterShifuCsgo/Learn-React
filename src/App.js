@@ -1,30 +1,24 @@
 import React from 'react';
-import '../src/style.css'
+import products from './components/other/productList'
+import Product from './components/Product';
 
 function App(){
-  const FirstName = "Markus";
-  const LastName = "Bergert";
 
-  const styles = {
-    color:"green",
-    'background-color': "red",
-    'font-size': '200px'
-  };
 
-  //syles can change given the javascript
-  if(FirstName == "Markus"){
-    styles['background-color'] = 'blue';
-  }  
- 
+  const productsComponents = products.map(
+  (obj) => {
+  return <li><Product key={obj.id} name={obj.name} price={obj.price} description={obj.description}></Product></li>
+  });
 
-  //if you want to use inline css, then you have to make style use javascript object and it needs to be in javascript land
-  return (
+
+  return(
     <div>
-    <p style={{color:"green", 'background-color': "red"}}>Hello {FirstName + " " + LastName}</p>
-    or
-    <p style={styles}>Hello {FirstName + " " + LastName}</p>
+      <ul>
+        {productsComponents} 
+      </ul>    
+
     </div>
-  )
+  ) 
 }
 
 export default App
