@@ -1,24 +1,24 @@
 import React from 'react';
-import products from './components/other/productList'
-import Product from './components/Product';
-
-function App(){
 
 
-  const productsComponents = products.map(
-  (obj) => {
-  return <li><Product key={obj.id} name={obj.name} price={obj.price} description={obj.description}></Product></li>
-  });
+class App extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      isLoggedIn:true,
+    }
+  }
 
+  isUserLoggedIn() {
+    return this.state.isLoggedIn;
+  }
 
-  return(
-    <div>
-      <ul>
-        {productsComponents} 
-      </ul>    
+  render(){
+    return (<div>
+      <h1>You are currently logged ({ this.isUserLoggedIn() ? "in": "out"})</h1>
+    </div>)
 
-    </div>
-  ) 
+  }
 }
 
 export default App
