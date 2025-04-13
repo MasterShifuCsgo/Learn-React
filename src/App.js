@@ -22,6 +22,17 @@ class App extends React.Component {
 
   }
 
+  
+  static getDerivedStateFromProps(){
+    // return the new updated state based on props.
+    // only used to set its own state based upon the sent props.
+    // do not use this.
+  }
+
+  getSnapshotBeforeUpdate(){
+    // captures dom state.  
+  }
+
   componentDidMount(){
       // runs when render is first called
       // GET the data i need to correctly display
