@@ -8,7 +8,8 @@ class App extends React.Component {
       firstName: "",
       lastName: "",
       isChecked: false,
-      gender:"male"
+      gender:"",
+      favoriteColor: "green"
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -35,7 +36,7 @@ class App extends React.Component {
 
     return (
       <div>
-      <form>
+      <form onSubmit={this.handleSubmit}>
           <input 
           type='text' 
           name="firstName"
@@ -63,8 +64,23 @@ class App extends React.Component {
           <input type="radio" name="gender" checked={this.state.gender === "female"} value={"female"} onChange={this.handleChange}/>Female
           </label>
 
+          <p>{this.state.firstName} {this.state.lastName}</p>
+      <h1>you are a {this.state.gender}</h1>
+
+      {/*
+        formic is used to create froms in react. it makes it easier.
+      */}
+
+        <select value={this.state.favoriteColor} onChange={this.handleChange} name="favoriteColor">
+          <option value="green">green</option>
+          <option value="blue">blue</option>
+          <option value="red">red</option>
+        </select>
+        <h1>Your favorite color is {this.state.favoriteColor}</h1>
+
+        <button>Submit</button>
       </form>
-      <p>{this.state.firstName} {this.state.lastName}</p>
+
       </div>
     ) 
   }
